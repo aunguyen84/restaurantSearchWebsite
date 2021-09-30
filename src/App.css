@@ -1,0 +1,617 @@
+.main {
+  width: 100%;
+  position: relative;
+  color: #1c1c1c;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .spinnerHolder {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+.main .spinnerHolder i {
+  font-size: 26px;
+  color: #1075b9;
+}
+.main .upperSection {
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 0 30px;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 5000;
+}
+.main .upperSection .searchBar {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main .upperSection .searchBar li {
+  position: relative;
+  margin: 0 8px 0 0;
+}
+.main .upperSection .searchBar li:last-child {
+  margin: 0;
+}
+.main .upperSection .searchBar li .holder {
+  border: none;
+}
+.main .upperSection .searchBar li .holder .fieldIcon {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  color: #1c1c1c;
+}
+.main .upperSection .searchBar li .holder input {
+  width: 260px;
+  border: 1px solid #c0c0c0;
+  padding: 10px 15px 10px 35px;
+  font-size: 18px;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+}
+.main .upperSection .searchBar li .holder input:focus {
+  outline: none;
+}
+.main .upperSection .searchBar li .autoCompleteItems {
+  position: absolute;
+  border: 1px solid #c0c0c0;
+  border-top: none;
+  z-index: 999;
+  top: 44px;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+.main .upperSection .searchBar li .autoCompleteItems .item {
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+.main .upperSection .searchBar li .autoCompleteItems .item:hover {
+  background-color: #1075b9;
+  color: white;
+}
+.main .upperSection .searchBar li.searchButton {
+  width: 30px;
+  padding: 13px;
+  border-radius: 4px;
+  background-color: #d1262b;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.main .upperSection .searchBar li.searchButton i {
+  color: white;
+  top: 0;
+  left: 0;
+}
+.main .upperSection .navBar {
+  list-style: none;
+  display: flex;
+}
+.main .upperSection .navBar li {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #1c1c1c;
+}
+.main .upperSection .navBar li:last-child {
+  margin-right: 0;
+}
+.main .upperSection .navBar li:hover {
+  color: #1075b9;
+}
+.main .contentSection {
+  width: 1000px;
+  max-width: 1000px;
+  margin: 100px 0 0 0;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+}
+.main .contentSection .profilePage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main .contentSection .profilePage .profileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .contentSection .profilePage .profileForm .stageTitle {
+  color: #d1262b;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.main .contentSection .profilePage .profileForm .profileInput {
+  width: 260px;
+  border: 1px solid #c0c0c0;
+  padding: 10px 15px 10px 15px;
+  font-size: 18px;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  margin: 0 0 10px 0;
+}
+.main .contentSection .profilePage .profileForm .profileInput:focus {
+  outline: none;
+}
+.main .contentSection .profilePage .profileForm .profileLinkHolder {
+  margin: 10px 0;
+  width: 290px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  font-size: 14px;
+}
+.main .contentSection .profilePage .profileForm .profileLinkHolder .profileLink {
+  color: #1075b9;
+  cursor: pointer;
+}
+.main .contentSection .profilePage .profileForm .profileButton {
+  width: 290px;
+  padding: 13px;
+  border-radius: 4px;
+  background-color: #d1262b;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.main .contentSection .profilePage .profileForm .profileButton i {
+  color: white;
+  font-size: 18px;
+}
+.main .contentSection .profilePage .profileForm .instruction {
+  width: 290px;
+  margin: 10px 0;
+}
+.main .contentSection .profilePage .profileForm .profileErrorMessage {
+  width: 290px;
+  color: #d1262b;
+  margin: 10px 0;
+}
+.main .contentSection .profilePage .profileForm .profileVerifiedMessage {
+  width: 290px;
+  color: #5fac44;
+  margin: 10px 0;
+}
+.main .contentSection .profilePage .detailsForm .stageTitle {
+  color: #d1262b;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+.main .contentSection .profilePage .detailsForm .detailsHolder {
+  margin: 10px 0;
+}
+.main .contentSection .profilePage .detailsForm .detailsLabel {
+  font-weight: bold;
+}
+.main .contentSection .profilePage .detailsForm .profileButton {
+  width: 290px;
+  padding: 13px;
+  border-radius: 4px;
+  background-color: #d1262b;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.main .contentSection .profilePage .detailsForm .profileButton i {
+  color: white;
+  font-size: 18px;
+}
+.main .contentSection .homePage {
+  width: 100%;
+  box-sizing: border-box;
+}
+.main .contentSection .homePage .homeSection {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+.main .contentSection .homePage .homeSection.currentCity {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 40px;
+}
+.main .contentSection .homePage .homeSection .homeSubSection {
+  width: 50%;
+  padding-right: 20px;
+  border-right: 1px solid #c0c0c0;
+}
+.main .contentSection .homePage .homeSection .homeSubSection:last-of-type {
+  padding-left: 20px;
+  border-right: none;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .subSectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder {
+  margin: 20px 0 0 0;
+  list-style: none;
+  padding: 0;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder .restaurant {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 20px;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder .restaurant:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder .restaurant .left {
+  display: flex;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder .restaurant .left .name {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #1075b9;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder .restaurant .left .review {
+  margin-bottom: 10px;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder .restaurant .left img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder .restaurant .left i {
+  color: #f8ad34;
+}
+.main .contentSection .homePage .homeSection .homeSubSection .restaurantHolder .restaurant .right {
+  text-align: right;
+}
+.main .contentSection .searchResult {
+  display: flex;
+  width: 100%;
+}
+.main .contentSection .searchResult .filterPanel {
+  padding-right: 20px;
+  border-right: 1px solid #c0c0c0;
+}
+.main .contentSection .searchResult .filterPanel .filterSection .name {
+  font-size: 16px;
+  font-weight: bold;
+}
+.main .contentSection .searchResult .filterPanel .filterSection .filterList {
+  display: flex;
+  flex-wrap: no-wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main .contentSection .searchResult .filterPanel .filterSection .filterList li {
+  margin: 10px 5px 18px 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.main .contentSection .searchResult .filterPanel .filterSection .filterList li:last-child {
+  margin: 10px 0 18px 0;
+}
+.main .contentSection .searchResult .filterPanel .filterSection .filterList li.selected {
+  border: 1px solid #1075b9;
+  color: white;
+  background-color: #1075b9;
+}
+.main .contentSection .searchResult .filterPanel .filterSection .filterList li.selected i {
+  color: white;
+}
+.main .contentSection .searchResult .filterPanel .filterSection .filterList li.deselected {
+  border: 1px solid #c0c0c0;
+  color: #1c1c1c;
+  background-color: transparent;
+}
+.main .contentSection .searchResult .filterPanel .filterSection .filterList li.deselected i {
+  color: #1c1c1c;
+}
+.main .contentSection .searchResult .filterPanel .applyHolder {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.main .contentSection .searchResult .filterPanel .applyHolder button {
+  padding: 13px;
+  border-radius: 4px;
+  background-color: #d1262b;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+.main .contentSection .searchResult .filterPanel .applyHolder button:focus {
+  outline: none;
+}
+.main .contentSection .searchResult .searchList {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+.main .contentSection .searchResult .searchList .sortingPanel {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c0c0c0;
+  box-sizing: border-box;
+}
+.main .contentSection .searchResult .searchList .sortingPanel .sortLabel {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.main .contentSection .searchResult .searchList .sortingPanel .sortDropdown {
+  padding: 20px;
+  width: 120px;
+  height: 26px;
+  outline: none;
+}
+.main .contentSection .searchResult .searchList .sortingPanel .sortDropdown:focus {
+  outline: none;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder {
+  margin: 20px 0 0 0;
+  list-style: none;
+  padding: 0;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .searchErrorMessage {
+  width: 100%;
+  text-align: center;
+  color: #d1262b;
+  margin-top: 20px;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 20px;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .left {
+  display: flex;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .left .name {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #1075b9;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .left .review {
+  margin-bottom: 10px;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .left img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .left i {
+  color: #f8ad34;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .right {
+  text-align: right;
+  list-style: none;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .right li {
+  margin-bottom: 10px;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .right li:last-child {
+  margin-bottom: 0;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .right li.iconHolder i {
+  color: #1075b9;
+  margin-right: 5px;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .right li.iconHolder i:last-of-type {
+  margin-right: 0;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .right li .open {
+  color: #45a51b;
+}
+.main .contentSection .searchResult .searchList .restaurantHolder .restaurant .right li .close {
+  color: #d1262b;
+}
+.main .contentSection .restaurantDetails {
+  width: 100%;
+}
+.main .contentSection .restaurantDetails .topSection {
+  width: 100%;
+}
+.main .contentSection .restaurantDetails .topSection .info {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 30%;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart li {
+  margin-bottom: 10px;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart li:last-child {
+  margin-bottom: 0;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart li.name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1c1c1c;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart li.review i {
+  color: #f8ad34;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart li i {
+  color: #1075b9;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart li.addressPhone {
+  display: flex;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart li.addressPhone i {
+  width: 20px;
+}
+.main .contentSection .restaurantDetails .topSection .info .leftPart img {
+  width: 140px;
+  height: 140px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+.main .contentSection .restaurantDetails .topSection .info .centerPart {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 30%;
+}
+.main .contentSection .restaurantDetails .topSection .info .centerPart li {
+  margin-bottom: 10px;
+}
+.main .contentSection .restaurantDetails .topSection .info .centerPart li:last-child {
+  margin-bottom: 0;
+}
+.main .contentSection .restaurantDetails .topSection .info .centerPart li .open {
+  color: #45a51b;
+}
+.main .contentSection .restaurantDetails .topSection .info .centerPart li .close {
+  color: #d1262b;
+}
+.main .contentSection .restaurantDetails .topSection .info .centerPart li .answer {
+  font-weight: bold;
+}
+.main .contentSection .restaurantDetails .topSection .info .centerPart li i {
+  color: #1075b9;
+}
+.main .contentSection .restaurantDetails .topSection .info .rightPart {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 30%;
+}
+.main .contentSection .restaurantDetails .topSection .info .rightPart li {
+  display: flex;
+  margin-bottom: 10px;
+}
+.main .contentSection .restaurantDetails .topSection .info .rightPart li:last-child {
+  margin-bottom: 0;
+}
+.main .contentSection .restaurantDetails .topSection .info .rightPart li .day {
+  font-weight: bold;
+  min-width: 100px;
+  width: 100px;
+}
+.main .contentSection .restaurantDetails .topSection .photos {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 20px;
+}
+.main .contentSection .restaurantDetails .topSection .photos img {
+  width: 30%;
+}
+.main .contentSection .restaurantDetails .reviewSection {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.main .contentSection .restaurantDetails .reviewSection .review {
+  width: 30%;
+  padding: 0;
+  margin: 0;
+}
+.main .contentSection .restaurantDetails .reviewSection .review .user {
+  display: flex;
+  width: 100%;
+  padding: 0 0 10px 0;
+}
+.main .contentSection .restaurantDetails .reviewSection .review .user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+.main .contentSection .restaurantDetails .reviewSection .review .user .userInfo {
+  margin: 0 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+.main .contentSection .restaurantDetails .reviewSection .review .user .userInfo li {
+  margin-bottom: 10px;
+}
+.main .contentSection .restaurantDetails .reviewSection .review .user .userInfo li:last-child {
+  margin-bottom: 0;
+}
+.main .contentSection .restaurantDetails .reviewSection .review .user .userInfo li i {
+  color: #f8ad34;
+}
+.main .contentSection .restaurantDetails .reviewSection .review .reviewContent {
+  margin-top: 10px;
+}
+.main .contentSection .credit {
+  width: 100%;
+  padding: 20px 0 0 0;
+  border-top: 1px solid #c0c0c0;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+.main .contentSection .credit .about {
+  color: #1075b9;
+  font-weight: 500;
+  cursor: pointer;
+}
